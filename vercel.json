@@ -1,0 +1,11 @@
+
+{
+  "functions": {
+    "src/app/api/*/route.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "crons": [
+    { "path": "/api/cron/reminders", "schedule": "0 7 * * *" }
+  ]
+}
