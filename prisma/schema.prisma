@@ -30,7 +30,7 @@ model Profile {
   userId    String  @unique
   user      User    @relation(fields: [userId], references: [id])
   bio       String?
-  roleHints String? // freeform text about user's profession, skills
+  roleHints String?
 }
 
 model Organization {
@@ -59,7 +59,7 @@ model Query {
   userId     String
   orgId      String?
   input      String
-  complexity Int // 1..4 -> which agent tier we used
+  complexity Int
   createdAt  DateTime      @default(now())
   user       User          @relation(fields: [userId], references: [id])
   org        Organization? @relation(fields: [orgId], references: [id])
