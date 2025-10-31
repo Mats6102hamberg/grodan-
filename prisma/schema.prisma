@@ -106,7 +106,7 @@ model Reminder {
   user      User     @relation(fields: [userId], references: [id])
 }
 
-/******** next-auth tables ********/
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
